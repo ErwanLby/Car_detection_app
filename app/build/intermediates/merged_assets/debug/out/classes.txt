@@ -1,0 +1,9 @@
+bumper_back
+bumper_front
+door
+fender
+grill_radiator
+hood
+light
+trunk
+wheel

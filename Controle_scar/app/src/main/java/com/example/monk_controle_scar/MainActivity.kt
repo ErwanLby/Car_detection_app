@@ -18,7 +18,8 @@ import java.net.Socket;
 
 open class MainActivity : AppCompatActivity() {
 
-
+    private var buttonIp: Button? = null
+    private var buttonPort: Button? = null
     private var buttonAvancer: Button? = null
     private var buttonReculer: Button? = null
     private var buttonGauche: Button? = null
@@ -26,16 +27,61 @@ open class MainActivity : AppCompatActivity() {
     private var buttonOrienterG: Button? = null
     private var buttonOrienterD: Button? = null
     private var message_sortant: String? = null
+    private var PORT: Int = 0
+    private var HOST : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        buttonAvancer = findViewById<View>(R.id.button_avancer) as Button // reference to the send button
+        buttonIp = findViewById<View>(R.id.button_ip) as Button // reference to the send button
+        buttonPort = findViewById<View>(R.id.button_port) as Button
+        buttonAvancer = findViewById<View>(R.id.button_avancer) as Button 
         buttonReculer = findViewById<View>(R.id.button_reculer) as Button
         buttonGauche = findViewById<View>(R.id.button_gauche) as Button
         buttonDroite = findViewById<View>(R.id.button_droite) as Button
         buttonOrienterG = findViewById<View>(R.id.button_orienter_gauche) as Button
         buttonOrienterD = findViewById<View>(R.id.button_orienter_droite) as Button
+        
+        buttonIp!!.setOnClickListener {
+            HOST = findViewById<EditText>(R.id.AdresseIP).text.toString()
+        }
+        buttonPort!!.setOnClickListener {
+            var chainePort = findViewById<EditText>(R.id.Port).text.toString()
+            PORT = Integer.parseInt(chainePort) //le port doit etre un int et non un string
+        }
+        buttonAvancer!!.setOnLongClickListener(OnLongClickListener { v -> //si le bouton est maintenu
+            message_sortant = "Avancer" //on definit le message
+            boutonMaintenu(v) //et on l'envoi en continu
+            true
+        })
+        buttonReculer!!.setOnLongClickListener(OnLongClickListener { v ->
+            message_sortant = "Reculer"
+            boutonMaintenu(v)
+            true
+        })
+        buttonGauche!!.setOnLongClickListener(OnLongClickListener { v ->
+            message_sortant = "Gauche"
+            boutonMaintenu(v)
+            true
+        })
+        buttonDroite!!.setOnLongClickListener(OnLongClickListener { v ->
+            message_sortant = "Droite"
+            boutonMaintenu(v)
+            true
+        })
+        buttonOrienterG!!.setOnLongClickListener(OnLongClickListener { v ->
+            message_sortant = "Orienter Gauche"
+            boutonMaintenu(v)
+            true
+        })
+        buttonOrienterD!!.setOnLongClickListener(OnLongClickListener { v ->
+            message_sortant = "Orienter Droite"
+            boutonMaintenu(v)
+            true
+        })
+        
+        
+        
         // Button press event listener
         buttonAvancer!!.setOnClickListener {
             message_sortant = "Avancer"
@@ -68,14 +114,32 @@ open class MainActivity : AppCompatActivity() {
             sendMessageTask.execute()
         }
     }
+    
+    //Envoi le message_sortant toutes les 100ms tant que le bouton est maintenu
+    private fun boutonMaintenu(v: View?) {
+        var thread = Thread {
+            // TODO Auto-generated method stub
+            try {
+                while (v!!.isPressed) {
+                    val sendMessageTask = SendMessage()
+                    sendMessageTask.execute()
+                    Thread.sleep(100);
+                }
+            } catch (e : java.lang.Exception) {}
+        }
 
+        thread.start()
+        true
+    }
+    
+    //permet d'envoyer le message une fois
     private inner class SendMessage :
         AsyncTask<Void?, Void?, Void?>() {
         override fun doInBackground(vararg p0: Void?): Void? {
             try {
 
                 //Log.d("Connexion", "Demande de connexion");
-                var client = Socket("192.168.20.181", 3456) // connect to the server
+                var client = Socket(HOST,PORT) //"192.168.20.181", 3456) // connect to the server
 
                 //////  ENVOIE D'UN MESSAGE SORTANT ///////
                 Log.d("Connexion", "Envoie de A")

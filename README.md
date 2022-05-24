@@ -93,36 +93,35 @@ Ce ReadMe contient toutes les informations pour :
 
 <br>
 
-
-  ![alt-text](ressources/balena_iso.png)
+  * Vous pouvez maintenant lancer android studio !
+  * Pour cela, dans un terminal : cd android-studio/bin/ puis lancer android studio : ./studio.sh
+  * Une fenêtre s'ouvre, victoire ! 
+  * Vous pouvez maintenant choisir le mode d'installation standard
+<br>
+<br>
+  ![alt-text](ressources/type_installation.png)
 
 <br>
 
 
-  Ensuite cela
-
+  * Ensuite, choisissez le thème dracula (sombre) comme toute personne avec un minimum de style qui se respecte
+<br>
+<br>
+  ![alt-text](ressources/theme_android.png)
 <br>
 
-
-  ![alt-text](ressources/balena_usb.png)
-
+  * Acceptez maintenant les termes et conditions d'android studio sans naturellement les lire, à la manière d'un Kyle
+<br>
+<br>
+  ![alt-text](ressources/conditions_android.png)
 <br>
 
-  Cliquez qq part
-
+ * Android Studio va ensuite télécharger quelques fichiers.
+ * Une fois cela fait, c'est bon : vous êtes sur Android Studio
 <br>
-
-  ![alt-text](ressources/balena_result.png)
-
 <br>
-
-  Une fois ceci fait, faites cela
-
+  ![alt-text](ressources/bienvenue_android.png)
 <br>
-
-
-<br>
-
 
 
 ### Étape 2 : l'étape deux

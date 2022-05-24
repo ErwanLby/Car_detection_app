@@ -75,7 +75,7 @@ Ce ReadMe contient toutes les informations pour :
 ### Étape 1 : faire qqch
 <br>
 
-  * Ceci
+  * Télécharger Android Studio sur le [site officiel](https://developer.android.com/studio) 
 
   * Cela
 

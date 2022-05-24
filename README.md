@@ -78,8 +78,6 @@ Ce ReadMe contient toutes les informations pour :
   * Télécharger Android Studio sur le [site officiel](https://developer.android.com/studio) 
 
 <br>
-<br>
-
 
   ![alt-text](ressources/telecharger_android_studio.png)
 
@@ -98,29 +96,33 @@ Ce ReadMe contient toutes les informations pour :
   * Une fenêtre s'ouvre, victoire ! 
   * Vous pouvez maintenant choisir le mode d'installation standard
 <br>
-<br>
-  ![alt-text](ressources/type_installation.png)
+
+  ![alt-text](ressources/type_installation)
 
 <br>
 
 
-  * Ensuite, choisissez le thème dracula (sombre) comme toute personne avec un minimum de style qui se respecte
+  * Ensuite, choisissez le thème darcula (sombre) comme toute personne avec un minimum de style qui se respecte
 <br>
+
+  ![alt-text](ressources/theme_anadroid)
+  
 <br>
-  ![alt-text](ressources/theme_android.png)
-<br>
+
 
   * Acceptez maintenant les termes et conditions d'android studio sans naturellement les lire, à la manière d'un Kyle
 <br>
 <br>
-  ![alt-text](ressources/conditions_android.png)
+  ![alt-text](ressources/conditions_android)
+  
 <br>
 
  * Android Studio va ensuite télécharger quelques fichiers.
  * Une fois cela fait, c'est bon : vous êtes sur Android Studio
 <br>
-<br>
-  ![alt-text](ressources/bienvenue_android.png)
+
+  ![alt-text](ressources/bienvenue_android)
+  
 <br>
 
 

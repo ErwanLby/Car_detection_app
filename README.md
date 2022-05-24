@@ -77,9 +77,6 @@ Ce ReadMe contient toutes les informations pour :
 
   * Télécharger Android Studio sur le [site officiel](https://developer.android.com/studio) 
 
-  * Cela
-
-
 <br>
 <br>
 
@@ -89,7 +86,10 @@ Ce ReadMe contient toutes les informations pour :
 <br>
 
 
- Faire ceci
+  * Dézipper le fichier à l'endroit où vous souhaitez installer Android Studio
+  * Ouvrir un terminal et installer les libraires nécessaires grâce à :
+  * - sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+
 
 <br>
 

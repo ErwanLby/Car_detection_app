@@ -49,32 +49,32 @@ open class MainActivity : AppCompatActivity() {
             var chainePort = findViewById<EditText>(R.id.Port).text.toString()
             PORT = Integer.parseInt(chainePort) //le port doit etre un int et non un string
         }
-        buttonAvancer!!.setOnLongClickListener(OnLongClickListener { v -> //si le bouton est maintenu
+        buttonAvancer!!.setOnLongClickListener(View.OnLongClickListener { v -> //si le bouton est maintenu
             message_sortant = "Avancer" //on definit le message
             boutonMaintenu(v) //et on l'envoi en continu
             true
         })
-        buttonReculer!!.setOnLongClickListener(OnLongClickListener { v ->
+        buttonReculer!!.setOnLongClickListener(View.OnLongClickListener { v ->
             message_sortant = "Reculer"
             boutonMaintenu(v)
             true
         })
-        buttonGauche!!.setOnLongClickListener(OnLongClickListener { v ->
+        buttonGauche!!.setOnLongClickListener(View.OnLongClickListener { v ->
             message_sortant = "Gauche"
             boutonMaintenu(v)
             true
         })
-        buttonDroite!!.setOnLongClickListener(OnLongClickListener { v ->
+        buttonDroite!!.setOnLongClickListener(View.OnLongClickListener { v ->
             message_sortant = "Droite"
             boutonMaintenu(v)
             true
         })
-        buttonOrienterG!!.setOnLongClickListener(OnLongClickListener { v ->
+        buttonOrienterG!!.setOnLongClickListener(View.OnLongClickListener { v ->
             message_sortant = "Orienter Gauche"
             boutonMaintenu(v)
             true
         })
-        buttonOrienterD!!.setOnLongClickListener(OnLongClickListener { v ->
+        buttonOrienterD!!.setOnLongClickListener(View.OnLongClickListener { v ->
             message_sortant = "Orienter Droite"
             boutonMaintenu(v)
             true

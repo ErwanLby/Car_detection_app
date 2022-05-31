@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Monk_controle_scar</string>
+    <string name="adresse_ip_serveur">adresse_ip_serveur</string>
+    <string name="_127_0_0_1">127.0.0.1</string>
+    <string name="confirmer">confirmer</string>
+    <string name="port">port</string>
+    <string name="_3954">3954</string>
+    <string name="tourner">tourner</string>
+    <string name="droite">droite</string>
+    <string name="reculer">reculer</string>
+    <string name="gauche">gauche</string>
+    <string name="avancer">avancer</string>
 </resources>
